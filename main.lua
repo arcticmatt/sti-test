@@ -4,20 +4,20 @@ local sti = require "sti"
 -- Local functions
 local function drawPlayerLayer(self)
   love.graphics.draw(
-  self.player.sprite,
-  math.floor(self.player.x),
-  math.floor(self.player.y),
-  0,
-  1,
-  1,
-  self.player.ox,
-  self.player.oy
-)
+    self.player.sprite,
+    math.floor(self.player.x),
+    math.floor(self.player.y),
+    0,
+    1,
+    1,
+    self.player.ox,
+    self.player.oy
+  )
 
--- Temporarily draw a point at our location so we know
--- that our sprite is offset properly
-love.graphics.setPointSize(10)
-love.graphics.points(math.floor(self.player.x), math.floor(self.player.y))
+  -- Temporarily draw a point at our location so we know
+  -- that our sprite is offset properly
+  love.graphics.setPointSize(10)
+  love.graphics.points(math.floor(self.player.x), math.floor(self.player.y))
 end
 
 local function updatePlayerLayer(self, dt)
